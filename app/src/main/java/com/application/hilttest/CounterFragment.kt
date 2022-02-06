@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.application.hilttest.databinding.FragmentCounterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CounterFragment : Fragment(R.layout.fragment_counter) {
 
     private var currentBinding: FragmentCounterBinding? = null
