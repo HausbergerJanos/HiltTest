@@ -9,7 +9,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.core.internal.deps.dagger.internal.Preconditions
-import com.application.hilttest.view.HiltTestActivity
 
 /**
  * launchFragmentInContainer from the androidx.fragment:fragment-testing library

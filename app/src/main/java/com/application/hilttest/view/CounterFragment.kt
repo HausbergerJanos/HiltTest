@@ -9,23 +9,18 @@ import androidx.lifecycle.lifecycleScope
 import com.application.hilttest.state.CounterViewModel
 import com.application.hilttest.R
 import com.application.hilttest.databinding.FragmentCounterBinding
-import dagger.hilt.android.AndroidEntryPoint
+import dagger.android.support.DaggerFragment
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@AndroidEntryPoint
-class CounterFragment : Fragment(R.layout.fragment_counter) {
+class CounterFragment : DaggerFragment(R.layout.fragment_counter) {
 
     private var currentBinding: FragmentCounterBinding? = null
     val binding get() = currentBinding!!
 
     @Inject
-    lateinit var factory: ViewModelProvider.Factory
-
-    val viewModel: CounterViewModel by viewModels(
-        factoryProducer = { factory }
-    )
+    lateinit var viewModel: CounterViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
