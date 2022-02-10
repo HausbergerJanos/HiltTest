@@ -1,4 +1,4 @@
-package com.application.hilttest
+package com.application.hilttest.view
 
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint

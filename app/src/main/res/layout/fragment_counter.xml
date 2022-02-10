@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/counter_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        tools:text="0"
         android:textSize="40sp"
         app:layout_constraintVertical_bias=".4"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +21,7 @@
         android:id="@+id/decrease_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Decrease"
+        android:text="@string/decrease"
         app:layout_constraintHorizontal_chainStyle="packed"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
@@ -32,7 +33,8 @@
         android:id="@+id/increase_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Increase"
+        android:contentDescription="@string/increase"
+        android:text="@string/increase"
         app:layout_constraintStart_toEndOf="@id/decrease_button"
         app:layout_constraintTop_toTopOf="@id/decrease_button"
         app:layout_constraintEnd_toEndOf="parent"/>

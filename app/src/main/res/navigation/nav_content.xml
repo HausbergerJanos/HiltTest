@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/contentFragment"
-        android:name="com.application.hilttest.ContentFragment"
+        android:name="com.application.hilttest.view.ContentFragment"
         tools:layout="@layout/fragment_content"
         android:label="ContentFragment" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/counterFragment"
-        android:name="com.application.hilttest.CounterFragment"
+        android:name="com.application.hilttest.view.CounterFragment"
         tools:layout="@layout/fragment_counter"
         android:label="CounterFragment" />
 </navigation>

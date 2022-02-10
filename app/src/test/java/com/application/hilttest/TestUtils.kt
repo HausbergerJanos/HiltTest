@@ -5,9 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.StyleRes
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.core.internal.deps.dagger.internal.Preconditions
+import com.application.hilttest.view.HiltTestActivity
 
 /**
  * launchFragmentInContainer from the androidx.fragment:fragment-testing library
@@ -43,8 +45,8 @@ inline fun <reified T : Fragment> launchFragmentInHiltContainer(
         activity.supportFragmentManager
             .beginTransaction()
             .add(android.R.id.content, fragment, "")
+            .setMaxLifecycle(fragment, Lifecycle.State.RESUMED)
             .commitNow()
-
         (fragment as T).action()
     }
 }

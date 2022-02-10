@@ -1,9 +1,10 @@
-package com.application.hilttest
+package com.application.hilttest.view
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.application.hilttest.R
 import com.application.hilttest.databinding.FragmentContentBinding
 
 class ContentFragment : Fragment(R.layout.fragment_content) {
